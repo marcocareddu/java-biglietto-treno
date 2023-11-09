@@ -38,6 +38,6 @@ public class CalcolaBiglietto {
 		float netTicket = grossTicket - discount;
 		
 //		Print Result
-		System.out.println(RESULT_PHRASE + "€" + netTicket);
+		System.out.println(RESULT_PHRASE + "€" + String.format("%.2f", netTicket));
 	}
 }
