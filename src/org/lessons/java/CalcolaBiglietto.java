@@ -26,14 +26,16 @@ public class CalcolaBiglietto {
 		String age = in.nextLine();
 		int intAge = Integer.valueOf(age);
 
+		in.close();
+		
 		float grossTicket = intKm * KM_COST;
 		float discount = 0;
 		
 //		Calc Result
 		if(intAge <= JUNIOR) {
-			discount = (grossTicket * JUNIOR)/100;
+			discount = (grossTicket * JUNIOR_DISCOUNT)/100;
 		} else if (intAge >= SENIOR) {
-			discount = (grossTicket * SENIOR)/100;
+			discount = (grossTicket * SENIOR_DISCOUNT)/100;
 		}
 		float netTicket = grossTicket - discount;
 		
